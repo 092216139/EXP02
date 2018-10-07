@@ -15,7 +15,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<jsp:useBean id="userDao" class="dao.UserDao"></jsp:useBean>
 	<jsp:setProperty property="*" name="usersLogin"/>
 	<%
-		request.setCharacterEncoding("gbk");
+		request.setCharacterEncoding("utf-8");
 		if(userDao.userLogin(usersLogin)){
 			session.setAttribute("User", usersLogin);
 			//登录成功，跳转到显示成功信息页面05-loginsuccess.jsp

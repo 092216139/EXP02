@@ -20,7 +20,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	}
 </style>
 <%
-	request.setCharacterEncoding("gbk");
+	request.setCharacterEncoding("utf-8");
 	// 一个name对应多个value
 	String [] hobbies=request.getParameterValues("hobbies");
 	String str="";
