@@ -29,21 +29,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		height:30px;
 		font-size:15px;
 	}
+	.input3{
+		width:60px;
+	}
 </style> 
 <%
-	String job=request.getParameter("job");
- 	pageContext.setAttribute("JOB", job);
+	String empjob=request.getParameter("empjob");
+ 	pageContext.setAttribute("empjob", empjob);
 %>
 <body>
 	<h1>添加成功！</h1>
 	<div>
-		<form action="selectAllAction" method="post">
-			<input class="input1" type="submit" value="全部员工信息">
-		</form>
 		<br>
-		<form action="selectAction?JOB=${JOB}" method="post">
-			查询员工工作种类：${JOB}
-			<br>
+		<form action="selectAction?JOB=${empjob}" method="post">
+			查询员工工作种类：<input class="input3" type="text" name="empjob" value="${empjob}" readonly>
+			<br><br>
 			<input class="input2" type="submit" value="确定">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<input class="input2" type="button" onclick="window.location.href='addemp.jsp'" value="返回">
 		</form>

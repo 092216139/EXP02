@@ -35,10 +35,14 @@ font{
 	font-size:20px;
 }
 </style>
+<%
+	String empjob=request.getParameter("empjob");
+	pageContext.setAttribute("empjob", empjob);
+%>
 <body>
 	<h1>员工信息</h1>
     <div style="text-align: right; width:1000px;margin:40px auto;">
-        <a href="addempsuccess.jsp"><font>返回</font></a>
+		<a href="addemp.jsp"><font>返回</font></a>
     	<table border="1" cellpadding="0" cellspacing="0" style="text-align: center;width:1000px;border:1px solid #ccc;">
     		<tr><th>员工编号</th><th>员工姓名</th><th>职称</th><th>工资</th><th>部门编号</th><th>操作</th></tr>
     		<c:forEach var="e" items="${empAll}">   
